@@ -1,20 +1,29 @@
 package com.ss.dippaxfc.controller;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.ss.dippax.dao.Categorydao;
 
 @Controller
 public class PageController {
 	
-	@RequestMapping(value= {"/","/home","/index"})
+	@Autowired
+	private Categorydao categorydao;
+	
+	
+	@RequestMapping(value={"/","/home","/index"})
 	public ModelAndView index()
 	{
 		ModelAndView mv=new ModelAndView("page");
 	    mv.addObject("title","Home");
+	    mv.addObject("categories",categorydao.list());
 	    mv.addObject("userClickHome",true);
+	    
+	    
 	    return mv;
 	}
 
@@ -39,5 +48,6 @@ public class PageController {
 		return mv;
 	}
 	  
+	
 	   
 }

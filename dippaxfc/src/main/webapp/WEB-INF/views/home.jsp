@@ -8,16 +8,11 @@
 </head>
 <body>
 <div class="container">
-
-      <div class="row">
-
-        <div class="col-lg-3">
-
-          <%@include file="./shared/sidebar.jsp" %>
-          
-
-        </div>
-        <!-- /.col-lg-3 -->
+<div class="row">
+<div class="col-md-3">
+<%@include file="./shared/sidebar.jsp" %>
+  </div>
+        <!-- /.col-md-3 -->
 
         <div class="col-lg-9">
 
@@ -132,7 +127,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="${images}/menacc.jpg" alt=""></a>
+                <a href="#"><img class="card-img-top" src="${images}/menaccess.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">Boyies Accessorie</a>

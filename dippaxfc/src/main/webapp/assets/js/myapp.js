@@ -2,26 +2,21 @@ $(function(){
 	// solving active menu probelems
 	switch(menu)
 	{
-	case 'About us':
+	case 'About':
 		$('#about').addClass('active');
 		break;
 		
 		
-	case 'Contact us':
+	case 'Contact':
 		$('#contact').addClass('active');
 		break;
 	
 		
-	case 'All Products':
-		$('#listproducts').addClass('active');
-		break;
-		
-		default:
-			if(menu == "home") break;
-			$('#listproducts').addClass('active');
-			$('#a_'+menu).addClass('active');
-		break;
-	}
+	    default:
+			$('#home').addClass('active'); 
+				break;
+			
+			}
 	
 	//code for jquery data table
 	

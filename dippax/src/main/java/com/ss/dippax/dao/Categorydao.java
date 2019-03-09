@@ -6,6 +6,9 @@ import com.ss.dippax.dto.Category;
 
 public interface Categorydao {
 	
-	List <Category> list();
-
+	
+	
+    List <Category> list();
+	
+    
 }

@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="${contextRoot}/home">DiPpAx</a>
+                <a class="navbar-brand" href="${contextRoot}/home">DIPPAX</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -23,7 +23,7 @@
 					<a href="${contextRoot}/contact">Contact</a>
                    
                     <li id="listproducts">
-                        <a href="${contextRoot}/show/all/products">View Products</a>
+                        <a href="${contextRoot}/listProducts">Products</a>
                     </li>
 					<security:authorize access="hasAuthority('ADMIN')">
 	                    <li id="manageProduct">
