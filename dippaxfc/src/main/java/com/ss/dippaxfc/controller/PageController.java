@@ -3,10 +3,12 @@ package com.ss.dippaxfc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ss.dippax.dao.Categorydao;
+import com.ss.dippax.dto.Category;
 
 @Controller
 public class PageController {
@@ -48,6 +50,31 @@ public class PageController {
 		return mv;
 	}
 	  
+	@RequestMapping(value={"/show/all/products"})
+	public ModelAndView showAllProducts()
+	{
+		ModelAndView mv=new ModelAndView("page");
+	    mv.addObject("title","All Products");
+	    mv.addObject("categories",categorydao.list());
+	    mv.addObject("userClickAllProducts",true);
+	    
+	    
+	    return mv;
+	}
 	
+	@RequestMapping(value={"/show/category/{id}/listProducts"})
+	public ModelAndView showCategoryProducts(@PathVariable("id") int id)
+	{
+		ModelAndView mv=new ModelAndView("page");
+		Category category=null;
+		category=categorydao.get(id);
+	   mv.addObject("title",category.getName());
+	    mv.addObject("categories",categorydao.list());
+	    mv.addObject("category",category);
+	    mv.addObject("userClickCategoryProducts",true);
+	    
+	    
+	    return mv;
+	}
 	   
 }

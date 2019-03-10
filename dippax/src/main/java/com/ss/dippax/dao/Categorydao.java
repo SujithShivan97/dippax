@@ -9,6 +9,6 @@ public interface Categorydao {
 	
 	
     List <Category> list();
-	
+	Category get(int id);
     
 }

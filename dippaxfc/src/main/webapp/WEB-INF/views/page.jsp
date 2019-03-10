@@ -73,7 +73,7 @@
 							href="${pageContext.request.contextPath}/home">Home</a></li>	
 						<li class="nav-item active"><a class="nav-link"
 							href="${pageContext.request.contextPath}/listProducts">
-								Products </a></li>
+								All Products </a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="${pageContext.request.contextPath }/about">About</a></li>
 						<li class="nav-item"><a class="nav-link"
@@ -102,7 +102,7 @@
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			<c:if test="${userClickProducts == true or userClickCategoryProducts == true }">
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 

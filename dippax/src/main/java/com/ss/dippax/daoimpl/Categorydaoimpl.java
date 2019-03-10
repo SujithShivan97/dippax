@@ -48,8 +48,17 @@ public class Categorydaoimpl implements Categorydao {
 		// TODO Auto-generated method stub
 		return categories;
 	}
-}
-	
+
+	public Category get(int id)
+	{
+		for(Category category:categories) {
+			if(category.getId()==id)
+				return category;
+		
+	}
+		return null;
+	}
+	}
 
 	
 	
@@ -75,15 +84,14 @@ public class Categorydaoimpl implements Categorydao {
 			return false;
 		}
 	      
-	}
+	}*/
 
 
-	public Category get(int id) {
-		
-		return sessionFactory.getCurrentSession().get(Category.class,Integer.valueOf(id));
-	}
+	
 
-	public boolean update(Category category) {
+	
+
+	/*public boolean update(Category category) {
 		try
 		{
 			sessionFactory.getCurrentSession().update(category);
