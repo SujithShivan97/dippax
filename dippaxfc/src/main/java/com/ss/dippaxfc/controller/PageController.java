@@ -50,13 +50,13 @@ public class PageController {
 		return mv;
 	}
 	  
-	@RequestMapping(value={"/show/all/products"})
+	@RequestMapping(value={"/show/all/listProducts"})
 	public ModelAndView showAllProducts()
 	{
 		ModelAndView mv=new ModelAndView("page");
 	    mv.addObject("title","All Products");
 	    mv.addObject("categories",categorydao.list());
-	    mv.addObject("userClickAllProducts",true);
+	    mv.addObject("userClickViewProducts",true);
 	    
 	    
 	    return mv;
