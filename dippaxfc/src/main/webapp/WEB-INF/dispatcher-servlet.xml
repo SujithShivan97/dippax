@@ -48,6 +48,7 @@ xmlns:wf="http://www.springframework.org/schema/webflow-config"
      
      <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
     <property name="flowRegistry" ref="flowRegistry"/>
+    <property name="order" value="-1"/>
    </bean>
    
    <bean id="viewFactoryCreator"

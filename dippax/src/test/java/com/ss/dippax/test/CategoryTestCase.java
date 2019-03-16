@@ -73,7 +73,7 @@ public class CategoryTestCase {
 	}*/
 	
 	
-	/*@Test
+	@Test
 	public void testCRUDCategory()
 	{
 	category=new Category();
@@ -97,8 +97,18 @@ public class CategoryTestCase {
 	category.setActive(true);
 	assertEquals("Something went wrong!",true,categorydao.add(category));
 	
+	category=new Category();
+	category.setName("ACCESSORIES");
+	category.setDescription("Check out the latest fashion here");
+	category.setImageUrl("CAT_4.png");
+	category.setActive(true);
+	assertEquals("Something went wrong!",true,categorydao.add(category));
 	
-	}*/
+	
+	
+	
+	
+	}
 	
 	
 	
