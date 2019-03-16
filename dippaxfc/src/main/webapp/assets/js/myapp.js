@@ -10,10 +10,15 @@ $(function(){
 	case 'Contact':
 		$('#contact').addClass('active');
 		break;
-	
 		
-	    default:
-			$('#home').addClass('active'); 
+	case 'View Products':
+	      $('#listProducts').addClass('active');
+	
+	
+	 default:
+		     if(menu=="Home") break;
+			$('#listProducts').addClass('active'); 
+	        $('#a_'+menu).addClass('active');
 				break;
 			
 			}

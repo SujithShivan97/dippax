@@ -1,68 +1,34 @@
 package com.ss.dippax.daoimpl;
 
-import java.util.ArrayList;
+
 import java.util.List;
+
+import javax.persistence.Query;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.ss.dippax.dao.Categorydao;
 import com.ss.dippax.dto.Category;
 
 
+
+
 @Repository("categorydao")
+@Transactional
 public class Categorydaoimpl implements Categorydao {
 
-	private static List<Category> categories= new ArrayList<Category>();
-	static
-	{
-		Category category=new Category();
-		category.setId(1);
-		category.setName("BOYS WEARS");
-		category.setDescription("HERE BOYS WEARS");
-		category.setImageUrl("CAT_1.PNG");
-		categories.add(category);
-		
-		
-		
-		category=new Category();
-		category.setId(2);
-		category.setName("GIRLS WEARS");
-		category.setDescription("HERE GIRLS WEARS");
-		category.setImageUrl("CAT_2.PNG");
-		categories.add(category);
-		
-		category=new Category();
-		category.setId(3);
-		category.setName("SHOES");
-		category.setDescription("HERE SHOES");
-		category.setImageUrl("CAT_3.PNG");
-		categories.add(category);
-		
-		
-		category=new Category();
-		category.setId(4);
-		category.setName("ACCESSORIES");
-		category.setDescription("HERE ACCESSORIE ");
-		category.setImageUrl("CAT_4.PNG");
-		categories.add(category);
-	}
-	public List<Category> list() {
-		// TODO Auto-generated method stub
-		return categories;
-	}
-
+	@Autowired
+	private SessionFactory sessionFactory;
+	
 	public Category get(int id)
 	{
-		for(Category category:categories) {
-			if(category.getId()==id)
-				return category;
-		
+	return sessionFactory.getCurrentSession().get(Category.class , Integer.valueOf(id));
 	}
-		return null;
-	}
-	}
-
 	
-	
-   /*  public List<Category> list() {
+   public List<Category> list() {
 		 String selectActiveCategory ="FROM Category WHERE active=:active";
 		Query query=sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
 		 query.setParameter("active",true);
@@ -84,14 +50,10 @@ public class Categorydaoimpl implements Categorydao {
 			return false;
 		}
 	      
-	}*/
+	}
 
 
-	
-
-	
-
-	/*public boolean update(Category category) {
+	public boolean update(Category category) {
 		try
 		{
 			sessionFactory.getCurrentSession().update(category);
@@ -121,6 +83,7 @@ public class Categorydaoimpl implements Categorydao {
 			ex.printStackTrace();
 			return false;
 		}
-	}*/
+	}
 
+}
 

@@ -13,7 +13,7 @@
 		
 		<h1>Contact Us</h1>
 		<hr/>
-		<p>This is an contact us page</p>	
+		<p3>This is a Contact Us Page</p3>	
 	
 	</div>
 

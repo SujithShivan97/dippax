@@ -1,3 +1,4 @@
+
 package com.ss.dippax.test;
 
 import static org.junit.Assert.assertEquals;
@@ -69,6 +70,34 @@ public class CategoryTestCase {
 	public void testListCategory()
 	{
 		assertEquals("Successfully fetched",2,categorydao.list().size());	
+	}*/
+	
+	
+	/*@Test
+	public void testCRUDCategory()
+	{
+	category=new Category();
+	category.setName("BOYS WEARS");
+	category.setDescription("Check out the latest fashion here Boyies");
+	category.setImageUrl("CAT_1.png");
+	category.setActive(true);
+	assertEquals("Something went wrong!",true,categorydao.add(category));
+	
+	category=new Category();
+	category.setName("GIRLS WEARS");
+	category.setDescription("Check out the latest fashion here Girlies");
+	category.setImageUrl("CAT_2.png");
+	category.setActive(true);
+	assertEquals("Something went wrong!",true,categorydao.add(category));
+	
+	category=new Category();
+	category.setName("SHOES");
+	category.setDescription("Check out the latest fashion here");
+	category.setImageUrl("CAT_3.png");
+	category.setActive(true);
+	assertEquals("Something went wrong!",true,categorydao.add(category));
+	
+	
 	}*/
 	
 	

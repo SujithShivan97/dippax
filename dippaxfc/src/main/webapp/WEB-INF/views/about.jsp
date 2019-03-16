@@ -12,8 +12,8 @@
 	<div class="row">	
 		
 		<h1>About Us</h1>
-		<hr/>
-		<p>This is an about us page</p>	
+		
+		<h3>This is an about us page</h3>	
 	
 	</div>
 
