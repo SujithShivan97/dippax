@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Confirm Page</title>
 </head>
 <body>
 
-<%@include file="../shared/flows-header.jsp" %>	
-		<div class="container">
+	<%@include file="../shared/flows-header.jsp"%>
+	<div class="container">
 	
 	<div class="row">
 	
@@ -21,13 +21,12 @@
 					<h4>Personal Details</h4>
 				</div>
 			
-				
 				<div class="panel-body">
 					<div class="text-center">
-						<h3>Name : <strong>${registerModel.user.firstName} ${registerModel.user.lastName}</strong></h3>
-						<h4>Email : <strong>${registerModel.user.email}</strong></h4>
-						<h4>Contact : <strong>${registerModel.user.contactNumber}</strong></h4>
-						<h4>Role : <strong>${registerModel.user.role}</strong></h4>
+						<h4>Name:${registerModel.user.firstName} ${registerModel.user.lastName}</h4>
+						<h4>Email:${registerModel.user.email}</h4>
+						<h4>Contact:${registerModel.user.contactNumber}</h4>
+						<h4>Role:${registerModel.user.role}</h4>
 						<p>
 							<a href="${flowExecutionUrl}&_eventId_personal" class="btn btn-primary">Edit</a>
 						</p>
@@ -36,9 +35,7 @@
 			
 			</div>
 					
-		
 		</div>
-		
 		
 		<div class="col-sm-6">
 		
@@ -82,8 +79,7 @@
 	</div>
 
 </div>
-		
-		<%@include file="../shared/flows-footer.jsp" %>
-		
+	<%@include file="../shared/flows-footer.jsp"%>
+
 </body>
 </html>

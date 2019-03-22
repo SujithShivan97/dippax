@@ -102,8 +102,6 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-
 	public String getConfirmPassword() {
 		return confirmPassword;
 	}
@@ -120,12 +118,7 @@ public class User implements Serializable {
 		this.enabled = enabled;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", contactNumber=" + contactNumber + ", role=" + role + ", password=" + password + ", enabled="
-				+ enabled + "]";
-	}
+	
 
 	
 

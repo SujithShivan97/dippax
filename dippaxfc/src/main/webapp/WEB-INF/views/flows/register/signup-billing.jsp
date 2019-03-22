@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Billing Page</title>
 </head>
 <body>
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>			
