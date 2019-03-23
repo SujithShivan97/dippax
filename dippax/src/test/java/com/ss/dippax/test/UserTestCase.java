@@ -31,7 +31,7 @@ public class UserTestCase {
 		userdao= (Userdao)context.getBean("userdao");
 	}
 	
-    /*@Test 
+    @Test 
 	public void testAdd()
 	{
     	user = new User() ;
@@ -44,49 +44,47 @@ public class UserTestCase {
 		user.setPassword("12345");
 		assertEquals("Failed to add the user!", true, userdao.add(user));	
 		
+		user = new User() ;
+		user.setFirstName("Sujith");
+		user.setLastName("Shivan");
+		user.setEmail("ss@gmail.com");
+		user.setContactNumber("123451544");
+		user.setRole("ADMIN");
+		user.setEnabled(true);
+		user.setPassword("1997");
+		assertEquals("Failed to add the user!", true, userdao.add(user));	
 		
-		address = new Address();
-		address.setAddressLineOne("101/B Jadoo Society, Krissh Nagar");
-		address.setAddressLineTwo("Near Kaabil Store");
-		address.setCity("Mumbai");
-		address.setState("Maharashtra");
-		address.setCountry("India");
-		address.setPostalCode("400001");
-		address.setBilling(true);
 		
-		// linked the address with the user
-		address.setUserId(user.getId());	
-				
-		assertEquals("Failed to add the address!", true, userdao.addAddress(address));
-
-		
-		if(user.getRole().equals("USER"))
-		{
-			//Create a cart
-		 cart=new Cart();
-		 cart.setUser(user);
-		 
-		 assertEquals("Failed to add the cart!", true, userdao.addCart(cart));
-		 
-             
-		 //Shipping Address
-		    address = new Address();
-			address.setAddressLineOne("201/B Jadoo Society, Kishan Kanhaiya Nagar");
-			address.setAddressLineTwo("Near Kudrat Store");
-			address.setCity("Mumbai");
-			address.setState("Maharashtra");
-			address.setCountry("India");
-			address.setPostalCode("400001");
-			address.setShipping(true);
-			
-			//link it with user
-             address.setUserId(user.getId());
-			assertEquals("Failed to add the shipping address!", true, userdao.addAddress(address));
-			
+    user = new User() ;
+	user.setFirstName("Srinivasan");
+	user.setLastName("Sriram");
+	user.setEmail("ssi@gmail.com");
+	user.setContactNumber("12345125445");
+	user.setRole("USER");
+	user.setEnabled(true);
+	user.setPassword("12345");
+	assertEquals("Failed to add the user!", true, userdao.add(user));	
 	
+	
+   user = new User() ;
+               user.setFirstName("Anita");
+user.setLastName("S");
+user.setEmail("as@gmail.com");
+user.setContactNumber("1234512345");
+user.setRole("USER");
+user.setEnabled(true);
+user.setPassword("12345");
+assertEquals("Failed to add the user!", true, userdao.add(user));	
+
+}
+		
 		}
 		
-	}*/
+		
+		
+		
+		
+	
 
 
 	/*@Test 
@@ -190,6 +188,4 @@ public class UserTestCase {
 	}*/
 	
 	
-}
-		
-		
+

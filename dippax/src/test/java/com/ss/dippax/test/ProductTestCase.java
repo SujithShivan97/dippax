@@ -74,6 +74,33 @@ public class ProductTestCase {
 		assertEquals("Something went wrong while inserting a new product!",
 				true,productdao.add(product));		
 		
+		product = new Product();
+		product.setName("Gym Pants");
+		product.setBrand("Alle");
+		product.setDescription("Fashionable!");
+		product.setUnitPrice(7000);
+		product.setActive(true);
+		product.setCategoryId(1);
+		product.setSupplierId(3);
+		
+		
+		assertEquals("Something went wrong while inserting a new product!",
+				true,productdao.add(product));		
+		
+		product = new Product();
+		product.setName("Printed Shirts");
+		product.setBrand("Gorious");
+		product.setDescription("Fashionable!");
+		product.setUnitPrice(7000);
+		product.setActive(true);
+		product.setCategoryId(1);
+		product.setSupplierId(3);
+		
+		
+		assertEquals("Something went wrong while inserting a new product!",
+				true,productdao.add(product));		
+		
+		
 		
 		
 				

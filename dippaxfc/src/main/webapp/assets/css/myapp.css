@@ -55,8 +55,7 @@ body {
 }
 
 footer {
-    margin: 10;
-    
+    margin: 0;
 }
 
 
@@ -71,7 +70,7 @@ footer {
 
 
 .content {
-	padding-bottom: 5px; /*height of the footer*/	
+	padding-bottom: 60px; /*height of the footer*/	
 }
 
 
@@ -79,7 +78,7 @@ footer {
 	width:100%;
 	position:absolute;
 	bottom:20px;
-	height: 5px;
+	height: 60px;
 	
 }
 

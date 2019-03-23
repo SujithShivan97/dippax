@@ -8,8 +8,10 @@ import com.ss.dippax.dto.User;
 
 public interface Userdao {
 
+
+
 	
-	/*//add the user
+	
 	boolean add(User user);
 	User getByEmail(String email);
 	
@@ -18,5 +20,5 @@ public interface Userdao {
 	Address getBillingAddress(int userId);
 	List<Address>listDeliveryAddress(int userId);
 	//update cart
-	boolean update(Cart cart);*/
+	boolean update(Cart cart);
 }

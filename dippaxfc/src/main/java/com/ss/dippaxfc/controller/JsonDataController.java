@@ -12,21 +12,21 @@ import com.ss.dippax.dao.Productdao;
 import com.ss.dippax.dto.Product;
 
 @Controller
-@RequestMapping(value="/json/data")
+@RequestMapping("/json/data")
 public class JsonDataController {
 	
 	@Autowired
 	private Productdao productdao;
 	
 	
-	@RequestMapping(value="/all/products")
+	@RequestMapping("/all/products")
 	@ResponseBody
 	public List<Product> getAllProducts()
 	{
 		return productdao.listActiveProducts();
 	}
 	
-	@RequestMapping(value="/category/{id}/products")
+	@RequestMapping("/category/{id}/products")
 	@ResponseBody
 	public List<Product> getProductsByCategory(@PathVariable int id)
 	{

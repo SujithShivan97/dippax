@@ -34,7 +34,7 @@ public class User implements Serializable {
 	private String contactNumber;
 	private String role;
 	private String password;
-	private String confirmPassword;
+	
 	private boolean enabled = true;
 	
 	@OneToOne(mappedBy="user", cascade=CascadeType.ALL)
@@ -102,13 +102,7 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getConfirmPassword() {
-		return confirmPassword;
-	}
-
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
-	}
+	
 
 	public boolean isEnabled() {
 		return enabled;

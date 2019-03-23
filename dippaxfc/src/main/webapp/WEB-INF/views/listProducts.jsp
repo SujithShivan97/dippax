@@ -68,7 +68,8 @@
 				<th>NAME</th>
 				<th>BRAND</th>
 				<th>PRICE</th>
-				<th>QUANTITY.AVAILABILITY</th>
+				<th>QTY.AVAILABILITY</th>
+				<th></th>
 				
 				</tr>
 				
@@ -81,7 +82,8 @@
 				<th>NAME</th>
 				<th>BRAND</th>
 				<th>PRICE</th>
-				<th>QUANTITY.AVAILABILITY</th>
+				<th>QTY.AVAILABILITY</th>
+				<th></th>
 				
 				</tr>
 				

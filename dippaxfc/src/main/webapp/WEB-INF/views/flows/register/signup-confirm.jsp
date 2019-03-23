@@ -23,10 +23,10 @@
 			
 				<div class="panel-body">
 					<div class="text-center">
-						<h4>Name:${registerModel.user.firstName} ${registerModel.user.lastName}</h4>
-						<h4>Email:${registerModel.user.email}</h4>
-						<h4>Contact:${registerModel.user.contactNumber}</h4>
-						<h4>Role:${registerModel.user.role}</h4>
+						<h4>Name:</h4>
+						<h4>Email:</h4>
+						<h4>Contact:</h4>
+						<h4>Role:</h4>
 						<p>
 							<a href="${flowExecutionUrl}&_eventId_personal" class="btn btn-primary">Edit</a>
 						</p>
@@ -47,11 +47,10 @@
 			
 				<div class="panel-body">
 					<div class="text-center">
-						<p>${registerModel.billing.addressLineOne}, </p>
-						<p>${registerModel.billing.addressLineTwo}, </p>
-						<p>${registerModel.billing.city} -  ${registerModel.billing.postalCode}, </p>
-						<p>${registerModel.billing.state}</p>
-						<p>${registerModel.billing.country}</p>
+						<p>Address: </p>
+						<p> </p>
+						<p></p>
+						<p></p>
 						<p>
 							<a href="${flowExecutionUrl}&_eventId_billing" class="btn btn-primary">Edit</a>
 						</p>
