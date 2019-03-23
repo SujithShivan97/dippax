@@ -12,8 +12,8 @@
 	<div class="row">	
 		
 		<h1>Contact Us</h1>
-		<hr/>
-		<p3>This is a Contact Us Page</p3>	
+		
+		<h3>This is a Contact Us Page</h3>	
 	
 	</div>
 
