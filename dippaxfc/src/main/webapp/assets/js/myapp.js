@@ -99,7 +99,42 @@ $(function() {
 		
 		}
 	
-	
+	//Login form Validation
+	var $loginForm = $('#loginForm');
+
+	if ($loginForm.length) {
+
+		$loginForm.validate({
+			rules : {
+				username : {
+					required : true,
+					email : true,
+				},
+				password : {
+					required : true,
+					minlength : 3
+				}
+			},
+			messages : {
+				username : {
+					required : 'Please enter the email address!',
+					email : 'Please enter the valid email address'
+				},
+				password : {
+					required : 'Please enter the password!',
+					minlength : 'Please enter atleast three characters'
+				}
+			},
+			errorElement : "em",
+			errorPlacement : function(error, element) {
+				// add the class of help-block
+				error.addClass('help-block');
+				// add the error element after the input element
+				error.insertAfter(element);
+			}
+		});
+
+	}
 	
 				
 		});
