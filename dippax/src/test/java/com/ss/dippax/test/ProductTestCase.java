@@ -36,6 +36,7 @@ public class ProductTestCase {
 		product.setBrand("Denim");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(2000);
+		product.setQuantity(21);
 		product.setActive(true);
 		product.setCategoryId(1);
 		product.setSupplierId(3);
@@ -46,6 +47,7 @@ public class ProductTestCase {
 		product.setBrand("Rowdy Club");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(20);
 		product.setActive(true);
 		product.setCategoryId(1);
 		product.setSupplierId(3);
@@ -56,6 +58,7 @@ public class ProductTestCase {
 		product.setBrand("Roadster");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(15);
 		product.setActive(true);
 		product.setCategoryId(1);
 		product.setSupplierId(3);
@@ -68,6 +71,7 @@ public class ProductTestCase {
 		product.setBrand("Lady Sid");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(32);
 		product.setActive(true);
 		product.setCategoryId(2);
 		product.setSupplierId(3);
@@ -82,6 +86,7 @@ public class ProductTestCase {
 		product.setBrand("Myntra");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(21);
 		product.setActive(true);
 		product.setCategoryId(2);
 		product.setSupplierId(3);
@@ -95,6 +100,7 @@ public class ProductTestCase {
 		product.setBrand("Vogue");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(17);
 		product.setActive(true);
 		product.setCategoryId(2);
 		product.setSupplierId(3);
@@ -110,6 +116,7 @@ public class ProductTestCase {
 		product.setBrand("Nike");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(31);
 		product.setActive(true);
 		product.setCategoryId(3);
 		product.setSupplierId(3);
@@ -123,6 +130,7 @@ public class ProductTestCase {
 		product.setBrand("Levinge");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(21);
 		product.setActive(true);
 		product.setCategoryId(3);
 		product.setSupplierId(3);
@@ -138,6 +146,7 @@ public class ProductTestCase {
 		product.setBrand("Sonata");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(22);
 		product.setActive(true);
 		product.setCategoryId(4);
 		product.setSupplierId(3);
@@ -154,6 +163,7 @@ public class ProductTestCase {
 		product.setBrand("Damnuous");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
+		product.setQuantity(12);
 		product.setActive(true);
 		product.setCategoryId(4);
 		product.setSupplierId(3);

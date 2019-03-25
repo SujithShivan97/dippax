@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ss.dippax.dao.Categorydao;
+import com.ss.dippax.dao.Productdao;
 import com.ss.dippax.dto.Category;
+import com.ss.dippax.dto.Product;
 
 @Controller
 public class PageController {
 	
 	@Autowired
 	private Categorydao categorydao;
+	
+	@Autowired
+	private Productdao productdao;
 	
 	
 	@RequestMapping(value={"/","/home","/index"})
@@ -78,14 +83,23 @@ public class PageController {
 	    return mv;
 	}
 	
-	@RequestMapping(value= "/register")
-	public ModelAndView register()
+	@RequestMapping(value="/show/{id}/product")
+	public ModelAndView showSingleProduct(@PathVariable int id)
 	{
 		ModelAndView mv=new ModelAndView("page");
-	    mv.addObject("title","Register");
+		Product product = productdao.get(id);
+		
+		//update views count
+		product.setViews(product.getViews() + 1);
+		productdao.update(product);
+		
+		mv.addObject("title",product.getName());
+		mv.addObject("product",product);
+		 mv.addObject("userClickShowProduct",true);
+	    
+	    
 	    return mv;
-	}
-	
 	
 	   
+}
 }
