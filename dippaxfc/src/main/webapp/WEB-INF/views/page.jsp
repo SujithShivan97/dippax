@@ -21,13 +21,16 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="Get Fashionable and comfortable">
+<meta name="author" content="Sujith Shivan">
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
 
 <title>DIPPAX - ${title}</title>
 <script>
 	window.menu = '${title}';
-	window.contextRoot = '${contextRoot}'
+	window.contextRoot='${contextRoot}';
+	
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -35,7 +38,7 @@
 <!-- Bootstrap readable theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
-<!-- Bootstrap DataTable theme -->
+<!-- Bootstrap Datatable theme -->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
@@ -83,11 +86,13 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
 		
-		<!-- DataTable Plugin-->
+		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.dataTables.js"></script>
 		
-		<!-- DataTable Bootstrap-->
+		
+		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
+		
 		
 		
 		

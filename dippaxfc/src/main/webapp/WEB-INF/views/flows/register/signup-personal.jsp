@@ -54,15 +54,6 @@
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label class="control-label col-md-4">Confirm Password</label>
-							<div class="col-md-8">
-								<sf:input type="password" path="confirmPassword"
-									class="form-control" placeholder="Re-type password" />
-								<sf:errors path="confirmPassword" cssClass="help-block"
-									element="em" />
-							</div>
-						</div>
 
 						<div class="form-group">
 							<label class="control-label col-md-4">Select Role</label>
@@ -79,7 +70,8 @@
 							<div class="col-md-offset-4 col-md-8">
 								<button type="submit" name="_eventId_billing"
 									class="btn btn-primary">
-									Click for Billing<span class="glyphicon glyphicon-chevron-right"></span>
+									Click for Billing<span
+										class="glyphicon glyphicon-chevron-right"></span>
 								</button>
 							</div>
 						</div>

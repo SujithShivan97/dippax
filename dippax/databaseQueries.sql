@@ -18,8 +18,7 @@ CREATE TABLE user_detail (
 	role VARCHAR(50),
 	enabled BOOLEAN,
 	password VARCHAR(60),
-	
-	email VARCHAR(100),
+    email VARCHAR(100),
 	contact_number VARCHAR(15),	
 	CONSTRAINT pk_user_id PRIMARY KEY(id)
 );
@@ -53,16 +52,16 @@ INSERT INTO category (name, description,image_url,is_active) VALUES ('ACCESSORIE
 --adding into user details--
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Sujith', 'Shivan', 'ADMIN', true, '$2a$06$ORtBskA2g5Wg0HDgRE5ZsOQNDHUZSdpJqJ2.PGXv0mKyEvLnKP7SW', 'sujithshivanoffi@gmail.com', '8888888888');
+VALUES ('Sujith', 'Shivan', 'ADMIN', true, '12345', 'sujithshivanoffi@gmail.com', '8888888888');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Srinivasan ', 'Sriram', 'SUPPLIER', true, '$2a$06$bzYMivkRjSxTK2LPD8W4te6jjJa795OwJR1Of5n95myFsu3hgUnm6', 'ss@gmail.com', '9999999999');
+VALUES ('Srinivasan ', 'Sriram', 'USER', true, '12345', 'ss@gmail.com', '9999999999');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Anitha', 'Vinod', 'SUPPLIER', true, '$2a$06$i1dLNlXj2uY.UBIb9kUcAOxCigGHUZRKBtpRlmNtL5xtgD6bcVNOK', 'av@gmail.com', '7777777777');
+VALUES ('Anitha', 'S', 'SUPPLIER', true, '12345', 'as@gmail.com', '7777777777');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Shruthi', 'Guru', 'USER', true, '$2a$06$4mvvyO0h7vnUiKV57IW3oudNEaKPpH1xVSdbie1k6Ni2jfjwwminq', 'shruthiguru12@gmail.com', '7777777777');
+VALUES ('Shruthi', 'Guru', 'USER', true, '12345', 'shruthiguru12@gmail.com', '7777777777');
 
 
 --adding into products--

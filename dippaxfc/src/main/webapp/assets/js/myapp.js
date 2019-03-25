@@ -50,91 +50,88 @@ $(function() {
 		$('#a_' + menu).addClass('active');
 		break;
 	}
+	
+	
+	
+	
 
 	// code for jquery dataTable
 
+
+   
+   var $table=$('#productListTable');
+    if($table.length)
+    	{ 
+    	var jsonUrl='';
+    	if(window.categoryId=='')
+        {
+    		jsonUrl=window.contextRoot + '/json/data/all/products';
+
+         }
+    	else
+    		{
+    		jsonUrl=window.contextRoot + '/json/data/category/'+ window.categoryId + 'products';
+    		
+    		}
+    	$table.DataTable( {
+    		lengthMenu:[[3,5,10,-1],['3 Records','5 Records','10 Records','ALL']],
+    		pageLength:5,
+    	       
+    		ajax:{
+    			url:jsonUrl,
+    			dataSrc:''
+    			},
+    			
+    			columns:[
+    				{
+    					data:'name'
+    				},
+    				{
+    				data:'brand'	
+    				},
+    				{
+    					data:'unitPrice',
+    					mRender:function(data,type,row)
+    					{
+    						return '&#8377; ' + data
+    					}
+    				},
+    				{
+    					data:'quantity'
+    				},
+    				{
+    					data:'id',
+    					bSortable:false,
+    					mRender:function(data,type,row)
+    					{
+    						var str='';
+    						str += '<a href="'+ window.contextRoot +'/show/'+ data +'/product" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a>  &#160;';
+    						str += '<a href="'+ window.contextRoot +'/cart/add/'+ data +'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></a>';
+    						return str;
+    					}
+    				}
+    				
+    			]
+    		
+    		
+    		
+    	});
+    	
+    	
+    	
+    	}
+   
+   
+
+   
    
     	
-	var $table=$('#listProductTable');
 	
-	if($table.length)
-		{
-		 var jsonUrl=''
-			    if(window.categoryId == '')
-			    	{
-			    	jsonUrl= window.contextRoot +'/json/data/all/products';
-			    	}
-			    else
-			    	{
-			    	jsonUrl=window.contextRoot+'/json/data/category/'+ window.categoryId +'/products';
-			    	}
-			    	
-		
-		//console.log('inside the table!');
-		$table.DataTable({
-			lengthMenu:[[3,5,10,-1],['3 records','5 records','10 records','ALL']],
-			pageLength:5,
-			ajax:{
-				url:jsonUrl,
-				dataSrc:''
-				},
-				columns:[
-					{
-						data:'name'
-					},
-					{
-						data:'brand'
-					},
-					{
-						data:'unitPrice'
-					},
-					{
-						data:'quantity'
-					},
-					
-				]
-			
-		});
-		
-		
-		}
 	
-	//Login form Validation
-	var $loginForm = $('#loginForm');
+	
+		
 
-	if ($loginForm.length) {
-
-		$loginForm.validate({
-			rules : {
-				username : {
-					required : true,
-					email : true,
-				},
-				password : {
-					required : true,
-					minlength : 3
-				}
-			},
-			messages : {
-				username : {
-					required : 'Please enter the email address!',
-					email : 'Please enter the valid email address'
-				},
-				password : {
-					required : 'Please enter the password!',
-					minlength : 'Please enter atleast three characters'
-				}
-			},
-			errorElement : "em",
-			errorPlacement : function(error, element) {
-				// add the class of help-block
-				error.addClass('help-block');
-				// add the error element after the input element
-				error.insertAfter(element);
-			}
-		});
-
-	}
+	
 	
 				
 		});

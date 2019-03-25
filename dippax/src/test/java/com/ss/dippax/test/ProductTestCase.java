@@ -61,13 +61,29 @@ public class ProductTestCase {
 		product.setSupplierId(3);
 		assertEquals("Something went wrong while inserting a new product!",
 				true,productdao.add(product));		
+		
+		
 		product = new Product();
-		product.setName("Formals");
-		product.setBrand("H&m");
+		product.setName("Jeans");
+		product.setBrand("Lady Sid");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
 		product.setActive(true);
-		product.setCategoryId(1);
+		product.setCategoryId(2);
+		product.setSupplierId(3);
+		
+		
+		assertEquals("Something went wrong while inserting a new product!",
+				true,productdao.add(product));		
+		
+		
+		product = new Product();
+		product.setName("Kurtas");
+		product.setBrand("Myntra");
+		product.setDescription("Fashionable!");
+		product.setUnitPrice(1000);
+		product.setActive(true);
+		product.setCategoryId(2);
 		product.setSupplierId(3);
 		
 		
@@ -75,12 +91,27 @@ public class ProductTestCase {
 				true,productdao.add(product));		
 		
 		product = new Product();
-		product.setName("Gym Pants");
-		product.setBrand("Alle");
+		product.setName("Party Wears");
+		product.setBrand("Vogue");
 		product.setDescription("Fashionable!");
-		product.setUnitPrice(7000);
+		product.setUnitPrice(1000);
 		product.setActive(true);
-		product.setCategoryId(1);
+		product.setCategoryId(2);
+		product.setSupplierId(3);
+		
+		
+		assertEquals("Something went wrong while inserting a new product!",
+				true,productdao.add(product));		
+		
+		
+		
+		product = new Product();
+		product.setName("Party Shoes");
+		product.setBrand("Nike");
+		product.setDescription("Fashionable!");
+		product.setUnitPrice(1000);
+		product.setActive(true);
+		product.setCategoryId(3);
 		product.setSupplierId(3);
 		
 		
@@ -88,17 +119,51 @@ public class ProductTestCase {
 				true,productdao.add(product));		
 		
 		product = new Product();
-		product.setName("Printed Shirts");
-		product.setBrand("Gorious");
+		product.setName("Heels");
+		product.setBrand("Levinge");
 		product.setDescription("Fashionable!");
-		product.setUnitPrice(7000);
+		product.setUnitPrice(1000);
 		product.setActive(true);
-		product.setCategoryId(1);
+		product.setCategoryId(3);
 		product.setSupplierId(3);
 		
 		
 		assertEquals("Something went wrong while inserting a new product!",
 				true,productdao.add(product));		
+		
+			
+		
+		product = new Product();
+		product.setName("Watches");
+		product.setBrand("Sonata");
+		product.setDescription("Fashionable!");
+		product.setUnitPrice(1000);
+		product.setActive(true);
+		product.setCategoryId(4);
+		product.setSupplierId(3);
+		
+		
+		
+		
+		
+		assertEquals("Something went wrong while inserting a new product!",
+				true,productdao.add(product));		
+		
+		product = new Product();
+		product.setName("Bands");
+		product.setBrand("Damnuous");
+		product.setDescription("Fashionable!");
+		product.setUnitPrice(1000);
+		product.setActive(true);
+		product.setCategoryId(4);
+		product.setSupplierId(3);
+		
+		
+		assertEquals("Something went wrong while inserting a new product!",
+				true,productdao.add(product));		
+		
+		
+		
 		
 		
 		
