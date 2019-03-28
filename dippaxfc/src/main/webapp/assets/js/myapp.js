@@ -1,25 +1,6 @@
 $(function() {
 
-	// for adding a loader
-	$(window).load(function() {
-		setTimeout(function() {
-			$(".se-pre-con").fadeOut("slow");
-		}, 500);
-	});
-
-	// to tackle the csrf token
-	var token = $('meta[name="_csrf"]').attr('content');
-	var header = $('meta[name="_csrf_header"]').attr('content');
-
-	if ((token != undefined && header != undefined)
-			&& (token.length > 0 && header.length > 0)) {
-		// set the token header for the ajax request
-		$(document).ajaxSend(function(e, xhr, options) {
-			xhr.setRequestHeader(header, token);
-		});
-
-	}
-
+	
 	// to solve active menu bar problem
 	switch (menu) {
 
@@ -97,16 +78,35 @@ $(function() {
     					}
     				},
     				{
-    					data:'quantity'
-    				},
-    				{
+    					data:'quantity',
+    					mRender(data,type,row)
+    					{
+    						if(data < 1)
+    							{
+    							return '<span style="color:red">OUT OF STOCK</span>';
+    							}
+    						  return data;
+    						}
+    				      
+                     },
+    				
+                     {
     					data:'id',
     					bSortable:false,
     					mRender:function(data,type,row)
     					{
     						var str='';
     						str += '<a href="'+ window.contextRoot +'/show/'+ data +'/product" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a>  &#160;';
-    						str += '<a href="'+ window.contextRoot +'/cart/add/'+ data +'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></a>';
+    						if(row.quantity < 1)
+    							{
+    							str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="glyphicon glyphicon-shopping-cart"></a>';
+    							}
+    						else
+    							{
+    							str += '<a href="'+ window.contextRoot +'/cart/add/'+ data +'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></a>';
+    							}
+    						
+    						
     						return str;
     					}
     				}
@@ -123,15 +123,4 @@ $(function() {
    
    
 
-   
-   
-    	
-	
-	
-	
-		
-
-	
-	
-				
-		});
+  });

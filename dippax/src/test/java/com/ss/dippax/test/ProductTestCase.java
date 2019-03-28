@@ -58,7 +58,7 @@ public class ProductTestCase {
 		product.setBrand("Roadster");
 		product.setDescription("Fashionable!");
 		product.setUnitPrice(1000);
-		product.setQuantity(15);
+		product.setQuantity(0);
 		product.setActive(true);
 		product.setCategoryId(1);
 		product.setSupplierId(3);

@@ -1,6 +1,5 @@
 package com.ss.dippaxfc.controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,9 +12,10 @@ import com.ss.dippax.dao.Productdao;
 import com.ss.dippax.dto.Category;
 import com.ss.dippax.dto.Product;
 
+
 @Controller
 public class PageController {
-	
+
 	@Autowired
 	private Categorydao categorydao;
 	

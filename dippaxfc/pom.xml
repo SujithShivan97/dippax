@@ -12,7 +12,7 @@
 	<properties>
 		<javaee.version> 7.0</javaee.version>
 		<spring.version>4.3.6.RELEASE</spring.version>
-		
+
 	</properties>
 
 	<dependencies>
@@ -45,6 +45,14 @@
 		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
@@ -63,12 +71,11 @@
 			<version>2.5.0.RELEASE</version>
 		</dependency>
 
-   
-	<!-- Spring Security -->	
+
 		
-	
-		
-		
+
+
+
 
 	</dependencies>
 
