@@ -42,7 +42,35 @@ public class UserTestCase {
 		user.setRole("USER");
 		user.setEnabled(true);
 		user.setPassword("12345");
-		assertEquals("Failed to add the user!", true, userdao.add(user));	
+		
+		
+		if(user.getRole().equals("USER"))
+		{
+			//Create a cart for the user
+		 cart=new Cart();
+		 cart.setUser(user);
+		 
+		 //attach the cart with the user
+		 user.setCart(cart);
+		 
+		}
+	
+		assertEquals("Failed to add the user!", true, userdao.add(user));
+		
+		address = new Address();
+		address.setAddressLineOne("3/4,Naidu Building");
+		address.setAddressLineTwo("Srinivasa Nagar");
+		address.setCity("Chennai");
+		address.setState("Tamilnadu");
+		address.setCountry("India");
+		address.setPostalCode("600050");
+		address.setBilling(true);
+		//set the address to user
+		address.setUser(user);
+	    assertEquals("Failed to add the address!", true, userdao.addAddress(address));
+
+		
+		
 		
 		user = new User() ;
 		user.setFirstName("Sujith");
@@ -55,6 +83,8 @@ public class UserTestCase {
 		assertEquals("Failed to add the user!", true, userdao.add(user));	
 		
 		
+		
+		
     user = new User() ;
 	user.setFirstName("Srinivasan");
 	user.setLastName("Sriram");
@@ -63,18 +93,65 @@ public class UserTestCase {
 	user.setRole("USER");
 	user.setEnabled(true);
 	user.setPassword("12345");
+	
+	
+	if(user.getRole().equals("USER"))
+	{
+		//Create a cart for the user
+	 cart=new Cart();
+	 cart.setUser(user);
+	 
+	 //attach the cart with the user
+	 user.setCart(cart);
+	 
+	}
 	assertEquals("Failed to add the user!", true, userdao.add(user));	
 	
+	address = new Address();
+	address.setAddressLineOne("12/4,Ambattur ");
+	address.setAddressLineTwo("Tiruvalur");
+	address.setCity("Chennai");
+	address.setState("Tamilnadu");
+	address.setCountry("India");
+	address.setPostalCode("600050");
+	address.setBilling(true);
+	//set the address to user
+	address.setUser(user);
+    assertEquals("Failed to add the address!", true, userdao.addAddress(address));
+
 	
    user = new User() ;
-               user.setFirstName("Anita");
+  user.setFirstName("Anita");
 user.setLastName("S");
 user.setEmail("as@gmail.com");
 user.setContactNumber("1234512345");
 user.setRole("USER");
 user.setEnabled(true);
 user.setPassword("12345");
+
+if(user.getRole().equals("USER"))
+{
+	//Create a cart for the user
+ cart=new Cart();
+ cart.setUser(user);
+ 
+ //attach the cart with the user
+ user.setCart(cart);
+ 
+}
 assertEquals("Failed to add the user!", true, userdao.add(user));	
+
+address = new Address();
+address.setAddressLineOne("101/B Jadoo Society, Krissh Nagar");
+address.setAddressLineTwo("Near Kaabil Store");
+address.setCity("Mumbai");
+address.setState("Maharashtra");
+address.setCountry("India");
+address.setPostalCode("400001");
+address.setBilling(true);
+//set the address to user
+address.setUser(user);
+assertEquals("Failed to add the address!", true, userdao.addAddress(address));
 
 }
 		
@@ -90,6 +167,7 @@ assertEquals("Failed to add the user!", true, userdao.add(user));
 	/*@Test 
 	public void testAdd()
 	{
+	
     	user = new User() ;
 		user.setFirstName("Rohan");
 		user.setLastName("Ajay");
@@ -131,15 +209,6 @@ assertEquals("Failed to add the user!", true, userdao.add(user));
 	/*@Test
 	public void AddAddress()
 	{
-		user = new User() ;
-		user.setFirstName("Rohan");
-		user.setLastName("Ajay");
-		user.setEmail("ra@gmail.com");
-		user.setContactNumber("1234512345");
-		user.setRole("USER");
-		user.setEnabled(true);
-		user.setPassword("12345");
-		assertEquals("Failed to add the user!", true, userdao.add(user));	
 		
 		address = new Address();
 		address.setAddressLineOne("101/B Jadoo Society, Krissh Nagar");
